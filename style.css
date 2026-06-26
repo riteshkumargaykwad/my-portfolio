@@ -1,0 +1,88 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #616e7c;
+  --border: #e1e4e8;
+  --linkedin: #0a66c2;
+  --github: #24292e;
+  --gmail: #ea4335;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 560px;
+  width: 100%;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 4px;
+}
+
+.role {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+}
+
+.summary h2 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.summary p {
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1 1 140px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn.linkedin { background: var(--linkedin); }
+.btn.github   { background: var(--github); }
+.btn.gmail    { background: var(--gmail); }
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .card { padding: 28px; }
+  .btn { flex: 1 1 100%; }
+}
